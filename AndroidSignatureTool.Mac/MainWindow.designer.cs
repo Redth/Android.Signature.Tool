@@ -13,22 +13,34 @@ namespace AndroidSignatureTool.Mac
 	partial class MainWindowController
 	{
 		[Outlet]
-		MonoMac.AppKit.NSButton buttonApk { get; set; }
-
-		[Outlet]
 		MonoMac.AppKit.NSButton buttonCopyMd5 { get; set; }
 
 		[Outlet]
 		MonoMac.AppKit.NSButton buttonCopySha1 { get; set; }
 
 		[Outlet]
-		MonoMac.AppKit.NSButton buttonCustomKeystore { get; set; }
-
-		[Outlet]
-		MonoMac.AppKit.NSButton buttonKeystore { get; set; }
+		MonoMac.AppKit.NSButton buttonGenerate { get; set; }
 
 		[Outlet]
 		MonoMac.AppKit.NSButton buttonKeytool { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSButton buttonOpenKeystore { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSMatrix radioSource { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSTextField textCustomAlias { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSTextField textCustomKeyPass { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSTextField textCustomKeystore { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSTextField textCustomStorePass { get; set; }
 
 		[Outlet]
 		MonoMac.AppKit.NSTextField textKeytool { get; set; }
@@ -41,34 +53,9 @@ namespace AndroidSignatureTool.Mac
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (textKeytool != null) {
-				textKeytool.Dispose ();
-				textKeytool = null;
-			}
-
-			if (buttonKeytool != null) {
-				buttonKeytool.Dispose ();
-				buttonKeytool = null;
-			}
-
-			if (buttonKeystore != null) {
-				buttonKeystore.Dispose ();
-				buttonKeystore = null;
-			}
-
-			if (buttonApk != null) {
-				buttonApk.Dispose ();
-				buttonApk = null;
-			}
-
-			if (buttonCustomKeystore != null) {
-				buttonCustomKeystore.Dispose ();
-				buttonCustomKeystore = null;
-			}
-
-			if (textMd5 != null) {
-				textMd5.Dispose ();
-				textMd5 = null;
+			if (buttonOpenKeystore != null) {
+				buttonOpenKeystore.Dispose ();
+				buttonOpenKeystore = null;
 			}
 
 			if (buttonCopyMd5 != null) {
@@ -76,14 +63,59 @@ namespace AndroidSignatureTool.Mac
 				buttonCopyMd5 = null;
 			}
 
-			if (textSha1 != null) {
-				textSha1.Dispose ();
-				textSha1 = null;
-			}
-
 			if (buttonCopySha1 != null) {
 				buttonCopySha1.Dispose ();
 				buttonCopySha1 = null;
+			}
+
+			if (buttonGenerate != null) {
+				buttonGenerate.Dispose ();
+				buttonGenerate = null;
+			}
+
+			if (buttonKeytool != null) {
+				buttonKeytool.Dispose ();
+				buttonKeytool = null;
+			}
+
+			if (radioSource != null) {
+				radioSource.Dispose ();
+				radioSource = null;
+			}
+
+			if (textCustomAlias != null) {
+				textCustomAlias.Dispose ();
+				textCustomAlias = null;
+			}
+
+			if (textCustomKeyPass != null) {
+				textCustomKeyPass.Dispose ();
+				textCustomKeyPass = null;
+			}
+
+			if (textCustomKeystore != null) {
+				textCustomKeystore.Dispose ();
+				textCustomKeystore = null;
+			}
+
+			if (textCustomStorePass != null) {
+				textCustomStorePass.Dispose ();
+				textCustomStorePass = null;
+			}
+
+			if (textKeytool != null) {
+				textKeytool.Dispose ();
+				textKeytool = null;
+			}
+
+			if (textMd5 != null) {
+				textMd5.Dispose ();
+				textMd5 = null;
+			}
+
+			if (textSha1 != null) {
+				textSha1.Dispose ();
+				textSha1 = null;
 			}
 		}
 	}
