@@ -41,9 +41,12 @@
     <IncludeMonoRuntime>true</IncludeMonoRuntime>
     <EnablePackageSigning>false</EnablePackageSigning>
     <CodeSigningKey>Developer ID Application</CodeSigningKey>
-    <EnableCodeSigning>true</EnableCodeSigning>
+    <EnableCodeSigning>false</EnableCodeSigning>
     <CreatePackage>true</CreatePackage>
     <CodeSignEntitlements>Entitlements.plist</CodeSignEntitlements>
+    <PackageSigningKey>Developer ID Installer</PackageSigningKey>
+    <I18n>
+    </I18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -58,9 +61,11 @@
     <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
     <CreatePackage>true</CreatePackage>
     <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
-    <EnableCodeSigning>true</EnableCodeSigning>
+    <EnableCodeSigning>false</EnableCodeSigning>
     <EnablePackageSigning>true</EnablePackageSigning>
     <CodeSignEntitlements>Entitlements.plist</CodeSignEntitlements>
+    <I18n>
+    </I18n>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,5 +104,8 @@
       <Project>{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}</Project>
       <Name>AndroidSignatureTool.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AndroidSigToolIcon.icns" />
   </ItemGroup>
 </Project>
