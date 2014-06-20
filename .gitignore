@@ -1,4 +1,4 @@
-*.userpefs
 *.suo
+*.userprefs
 bin/
 obj/
