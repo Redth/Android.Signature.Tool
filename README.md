@@ -2,9 +2,9 @@
 
 There are a number of services (Google Maps, Amazon to name a couple) which require that you get a MD5 or SHA1 hash/signature from the keystore file that's used to sign your app so that the service can generate a custom api key for you.
 
-This is generally a pain, and finding these values is quite tedious.
+This is generally a pain, and finding these values is quite tedious.  There is a nice guide up on the Xamarin documentation about this subject if you are interested: [Finding your Keystore's MD5 or SHA1 Signature](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/MD5_SHA1/)
 
-This tool is meant to make it a bit quicker to find these values, especially if you are using Xamarin.Android.
+However, this tool is meant to make it a bit quicker to find these values, especially if you are using Xamarin.Android.
 
 ### Default debug.keystore for Xamarin.Android
 If you are using Xamarin.Android, by default your app is signed with a debug.keystore file (you probably didn't even know this, or need to, which is a good thing!).  This tool can track down that auto generated .keystore file (which is the same for all your apps, by the way) and grab the hash/signature for you by just clicking a single button.  This way, you don't need to know where keystore tool is, or where the debug.keystore was generated.
