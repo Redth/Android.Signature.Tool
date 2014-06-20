@@ -119,6 +119,7 @@ namespace AndroidSignatureTool.Core
 			p.StartInfo = new System.Diagnostics.ProcessStartInfo (keytool, string.Format ("-list -v -keystore \"{0}\" -alias {1} -storepass {2} -keypass {3}", keystore, alias, storepass, keypass));
 			p.StartInfo.UseShellExecute = false;
 			p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.CreateNoWindow = true;
 			p.OutputDataReceived += (sender, e) => {
 				sbOut.Append (e.Data);
 			};

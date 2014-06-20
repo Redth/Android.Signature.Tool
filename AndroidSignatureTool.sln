@@ -1,37 +1,50 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSignatureTool.Core", "AndroidSignatureTool.Core\AndroidSignatureTool.Core.csproj", "{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSignatureTool.Console", "AndroidSignatureTool.Console\AndroidSignatureTool.Console.csproj", "{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSignatureTool.Mac", "AndroidSignatureTool.Mac\AndroidSignatureTool.Mac.csproj", "{21932492-59CB-43CC-B978-0D15C3E6126F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSignatureTool.Win", "AndroidSignatureTool.Win\AndroidSignatureTool.Win.csproj", "{1EE9B782-A923-44F5-B45C-30FBD88629BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppStore|Any CPU = AppStore|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		AppStore|Any CPU = AppStore|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21932492-59CB-43CC-B978-0D15C3E6126F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.AppStore|Any CPU.Build.0 = Debug|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC286EC-54F6-4F7D-983E-96E7B2E97E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC11F79-66BA-407C-AC63-A6B6D97FCAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.AppStore|Any CPU.ActiveCfg = AppStore|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.AppStore|Any CPU.Build.0 = AppStore|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21932492-59CB-43CC-B978-0D15C3E6126F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE9B782-A923-44F5-B45C-30FBD88629BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = AndroidSignatureTool.Mac\AndroidSignatureTool.Mac.csproj
