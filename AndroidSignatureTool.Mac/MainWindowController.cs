@@ -45,11 +45,41 @@ namespace AndroidSignatureTool.Mac
 		}
 
 
+		Core.Helper helper = new AndroidSignatureTool.Core.Helper ();
+
 		public override void WindowDidLoad ()
 		{
 			base.WindowDidLoad ();
  			
+			textKeytool.StringValue = helper.FindKeytool ();
 
+			buttonKeytool.Activated += (sender, e) => {
+				NSOpenPanel panelOpen = new NSOpenPanel();
+
+				var result = panelOpen.RunModal ();
+
+				if (result != 0)
+					textKeytool.StringValue = panelOpen.Url.FilePathUrl.ToString ();
+			};
+
+
+			buttonApk.Activated += (sender, e) => {
+
+			};
+
+			buttonKeystore.Activated += (sender, e) => {
+				try {
+
+					var sig = helper.GetSignaturesFromKeystore ();
+					if (sig != null) {
+						textMd5.StringValue = sig.MD5;
+						textSha1.StringValue = sig.SHA1;
+					}
+				} catch (Exception ex) {
+					Console.WriteLine (ex);
+					//TODO: Show dialog
+				}
+			};
 
 
 		}

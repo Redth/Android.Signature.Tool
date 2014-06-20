@@ -18,15 +18,22 @@ namespace AndroidSignatureTool.Core
 			var java = "/System/Library/Java/JavaVirtualMachines/";
 
 			var keytool = string.Empty;
+			if (Directory.Exists (java)) {
+				foreach (var dir in Directory.GetDirectories (java)) {
 
-			foreach (var dir in Directory.GetDirectories (java)) {
-
-				var kt = Path.Combine (dir, "Contents/Home/bin/keytool");
-				if (File.Exists (kt)) {
-					keytool = kt;
+					var kt = Path.Combine (dir, "Contents/Home/bin/keytool");
+					if (File.Exists (kt)) {
+						keytool = kt;
+					}
 				}
 			}
 
+			if (string.IsNullOrEmpty (keytool)) {
+				keytool = "/usr/bin/keytool";
+
+				if (!File.Exists (keytool))
+					keytool = string.Empty;
+			}
 			return keytool;
 		}
 
@@ -36,7 +43,7 @@ namespace AndroidSignatureTool.Core
 			string subkey = @"SOFTWARE\JavaSoft\Java Development Kit";
 
 			foreach (var wow64 in new[] { RegistryEx.Wow64.Key32, RegistryEx.Wow64.Key64 }) {
-				string key_name = string.Format (@"{0}\{1}\{2}", "HKLM", subkey, "CurrentVersion");
+				//string key_name = string.Format (@"{0}\{1}\{2}", "HKLM", subkey, "CurrentVersion");
 				var currentVersion = RegistryEx.GetValueString (RegistryEx.LocalMachine, subkey, "CurrentVersion", wow64);
 
 				if (!string.IsNullOrEmpty (currentVersion)) {
@@ -80,7 +87,7 @@ namespace AndroidSignatureTool.Core
 		string FindDebugKeystoreWin ()
 		{
 			var path = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.UserProfile), @"AppData\Local\Xamarin\Mono for Android\debug.keystore");
-			return string.Empty;
+			return path;
 		}
 
 		public string FindDebugKeystore ()

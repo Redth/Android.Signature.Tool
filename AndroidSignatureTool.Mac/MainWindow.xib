@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1090" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
+                <outlet property="buttonApk" destination="13" id="c3h-kt-pBS"/>
+                <outlet property="buttonCopyMd5" destination="31" id="mH2-8G-d6p"/>
+                <outlet property="buttonCopySha1" destination="29" id="uMG-Xs-BlZ"/>
+                <outlet property="buttonCustomKeystore" destination="15" id="UhV-aq-irC"/>
+                <outlet property="buttonKeystore" destination="11" id="bUF-2x-UTA"/>
+                <outlet property="buttonKeytool" destination="34" id="wUB-Pd-vZS"/>
+                <outlet property="textKeytool" destination="33" id="xXI-r5-J6j"/>
+                <outlet property="textMd5" destination="24" id="huH-a4-qWp"/>
+                <outlet property="textSha1" destination="27" id="1Ge-7F-n19"/>
                 <outlet property="window" destination="2" id="6"/>
             </connections>
         </customObject>
@@ -121,7 +130,6 @@
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <metadata/>
                     </box>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="17">
                         <rect key="frame" x="13" y="305" width="222" height="17"/>
@@ -178,7 +186,6 @@
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <metadata/>
                     </box>
                     <box autoresizesSubviews="NO" title="SHA1 Signature:" borderType="line" id="26">
                         <rect key="frame" x="12" y="16" width="572" height="47"/>
@@ -208,12 +215,9 @@
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <metadata/>
                     </box>
                 </subviews>
-                <metadata/>
             </view>
-            <metadata/>
         </window>
         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="41">
             <rect key="frame" x="0.0" y="0.0" width="360" height="17"/>
